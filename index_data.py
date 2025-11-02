@@ -27,7 +27,7 @@ actions = [
 helpers.bulk(client, actions)
 print("Data indexed successfully!")
 
-# --- OPTIONAL: VERIFY DATA ---
+# --- VERIFY DATA ---
 res = client.search(index=index_name, query={"match_all": {}}, size=5)
 print("Sample indexed documents:")
 for hit in res["hits"]["hits"]:
