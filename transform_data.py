@@ -27,7 +27,7 @@ if not client.indices.exists(index=SRC_INDEX):
 print("Copying data to new index...")
 client.reindex(
     body={"source": {"index": SRC_INDEX}, "dest": {"index": DST_INDEX}},
-    wait_for_completion=True,
+    
     refresh=True
 )
 print(f"Data copied → {DST_INDEX}")
@@ -48,7 +48,7 @@ client.update_by_query(
         "query": {"match_all": {}}
     },
     refresh=True,
-    conflicts="proceed"
+    
 )
 print("risk_level added")
 
@@ -98,7 +98,7 @@ client.delete_by_query(
         }
     },
     refresh=True,
-    conflicts="proceed"
+    
 )
 print("Invalid records removed")
 

@@ -7,8 +7,6 @@ client = Elasticsearch(
     api_key="TGNtblBwb0J1V2EzTEgzaTE0akk6NWlWRFNIX3dtQzJRQko1UVF4cGxKUQ==",
     verify_certs=False   # disable SSL verification (safe for local testing)
 )
-
-# --- SETTINGS ---
 index_name = "it_assets_inventory"
 
 # --- LOAD CSV (update path if needed) ---
